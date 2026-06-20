@@ -1,0 +1,6 @@
+{
+  "name": "Bakery Website & Ordering System",
+  "description": "A comprehensive bakery website featuring an online ordering catalog, delivery requests, custom cake services, food safety certifications, interactive photo galleries, customer reviews, a blog, and a robust admin dashboard with analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
