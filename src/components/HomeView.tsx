@@ -37,13 +37,13 @@ export default function HomeView({
             </div>
             
             <h1 className="font-serif text-5xl sm:text-6xl lg:text-7.5xl font-light text-white tracking-tight leading-none">
-              Bakery Brand <br />
-              <span className="text-[#c5a059] italic">Name Ideas Hub</span> & Designer
+              The Baker's <br />
+              <span className="text-[#c5a059] italic">Dozen</span> Bakery
             </h1>
             
             {/* Welcome message */}
             <p className="text-gray-400 text-sm sm:text-base max-w-md mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-              Are you planning a new dynamic bakery or custom pastry venture? Explore our fully interactive <strong className="text-[#c5a059] font-medium">Bakery Name Generator & Brand Visualizer</strong>. Discover handcrafted titles, try custom keywords, and see them rendered live on beautiful luxury boxes & storefront signage instantly.
+              Welcome to <strong className="text-[#c5a059] font-medium">The Baker's Dozen</strong>. Step into a world of pure aroma where 13 warm pastries are packed for the price of 12. Explore our exquisite handcrafted menu, order warm deliveries, or try our custom <strong className="text-[#c5a059] font-medium">Bakery Name Idea Designer</strong>.
             </p>
 
             {/* Call to action buttons */}
@@ -81,7 +81,7 @@ export default function HomeView({
               <div className="absolute inset-0 bg-gradient-to-tr from-[#c5a059] to-amber-600 rounded-none rotate-2 scale-[1.01] opacity-5"></div>
               <img
                 src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800"
-                alt="Sweet Devotion Signature Strawberry Cake"
+                alt="The Baker's Dozen Signature Strawberry Cake"
                 referrerPolicy="no-referrer"
                 className="relative rounded-none w-full h-[220px] sm:h-[280px] object-cover transition-transform duration-500 hover:scale-[1.01]"
               />
@@ -130,7 +130,7 @@ export default function HomeView({
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-3 mb-16">
           <span className="text-[10px] uppercase text-[#c5a059] tracking-[0.3em] font-mono leading-none block">Guest Experience</span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-light text-white">Why Sweet Devotion Sparkles</h2>
+          <h2 className="font-serif text-3xl sm:text-4xl font-light text-white">Why The Baker's Dozen Sparkles</h2>
           <p className="text-gray-400 max-w-lg mx-auto text-sm">
             Our uncompromised focus on quality, purity, and rigorous clean-room standards makes us Nairobi's favorite bakery.
           </p>

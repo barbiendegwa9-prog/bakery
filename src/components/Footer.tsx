@@ -19,10 +19,10 @@ export default function Footer({ onNav, onSetAdmin }: FooterProps) {
               <span className="p-2.5 bg-[#c5a059] rounded-full flex items-center justify-center">
                 <ChefHat className="h-5 w-5 text-black" />
               </span>
-              <span className="font-serif text-lg tracking-widest uppercase text-[#c5a059]">Bakery Name Ideas</span>
+              <span className="font-serif text-lg tracking-widest uppercase text-[#c5a059]">The Baker's Dozen</span>
             </div>
             <p className="text-xs text-gray-450 leading-relaxed font-light">
-              Your gourmet master builder for custom bakery brands, artisanal names, high-fashion taglines, and live product packaging mockups.
+              Gourmet master bakes, slow-fermented artisan sourdoughs, handcrafted croissants, and bespoke custom celebratory cakes.
             </p>
             <div className="pt-2">
               <span className="inline-flex items-center space-x-1.5 px-3 py-1 bg-[#c5a059]/10 text-[#c5a059] border border-[#c5a059]/30 text-[10px] font-mono uppercase tracking-wider">
@@ -123,7 +123,7 @@ export default function Footer({ onNav, onSetAdmin }: FooterProps) {
 
         {/* Bottom Socials & Disclaimer */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-[11px] text-gray-500">
-          <p>© {currentYear} Sweet Devotion Bakery. All rights reserved. Locally sourced, globally certified.</p>
+          <p>© {currentYear} The Baker's Dozen. All rights reserved. Locally sourced, globally certified.</p>
           <div className="flex space-x-4 mt-4 sm:mt-0 font-light text-gray-500">
             <span className="hover:text-[#c5a059] cursor-pointer transition-colors">Facebook</span>
             <span>•</span>

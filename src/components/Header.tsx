@@ -53,10 +53,10 @@ export default function Header({
             </div>
             <div>
               <span className="font-serif text-xl sm:text-2xl font-bold tracking-widest text-[#c5a059] flex items-center gap-1.5 uppercase">
-                BAKERY NAME IDEAS <Sparkles className="h-4 w-4 text-[#c5a059] fill-current" />
+                THE BAKER'S DOZEN <Sparkles className="h-4 w-4 text-[#c5a059] fill-current" />
               </span>
               <p className="text-[9px] sm:text-[10px] font-mono text-gray-450 tracking-wider uppercase">
-                Interactive Food Brand Designer
+                Artisan Sourdough & Custom Pastry
               </p>
             </div>
           </div>

@@ -371,7 +371,7 @@ export default function OrderSystem({
                     <div className="bg-orange-50/20 border border-orange-100 p-4 rounded-xl text-xs space-y-2 text-orange-850">
                       <p><strong>Bank Wire Instructions:</strong></p>
                       <ul className="list-disc pl-4 space-y-1 font-mono text-[10px] text-gray-600">
-                        <li>Bank: Sweet Devotion Trust Bank</li>
+                        <li>Bank: The Baker's Dozen Trust Bank</li>
                         <li>Account No: 120-456-789-0</li>
                         <li>Reference: Your Shipping Name</li>
                       </ul>

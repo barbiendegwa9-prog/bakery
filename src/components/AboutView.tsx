@@ -37,7 +37,7 @@ export default function AboutView() {
             <span className="text-[#c5a059] italic">Absolute Devotion</span>
           </h1>
           <p className="text-gray-400 font-light leading-relaxed text-sm sm:text-base">
-            Sweet Devotion was born from a modest wood-fired oven in a small rustic kitchen, fueled by a deep, generational passion for classical pastry arts and nutrient-rich crusty breads. What began as a heartfelt weekend experiment of baking traditional artisan croissants for close neighbors quickly blossomed into a celebrated local bakery.
+            The Baker's Dozen was born from a modest wood-fired oven in a small rustic kitchen, fueled by a deep, generational passion for classical pastry arts and nutrient-rich crusty breads. What began as a heartfelt weekend experiment of baking traditional artisan croissants for close neighbors quickly blossomed into a celebrated local bakery.
           </p>
           <p className="text-gray-500 font-light leading-relaxed text-xs sm:text-sm">
             Our lead pastry chef, Evelyn Rose, trained in the fine art of baking in European châteaux, brought home the secrets of multi-layered lamination and natural wild sourdough starters. Today, we carry on that rigorous legacy, ensuring that the touch of the artisan hand is never lost, and the smell of toasted sugars remains as authentic as the day we first opened our wooden doors.

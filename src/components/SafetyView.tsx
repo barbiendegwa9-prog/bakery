@@ -43,7 +43,7 @@ export default function SafetyView() {
       desc: "Official certification endorsing our zero-contamination risk profiles and safe allergen compartmentalization policies."
     },
     {
-      authority: "Sweet Devotion QA Board",
+      authority: "The Baker's Dozen QA Board",
       title: "Internal Quality Assurance Program",
       badge: "Double-Inspected",
       desc: "Each custom cake structure undergoes a 3-point visual check regarding fondant balance and structural dowel placements."
@@ -74,8 +74,8 @@ export default function SafetyView() {
           Pastry Purification & <br />
           <span className="text-[#c5a059] italic">Food Safety Standards</span>
         </h1>
-        <p className="text-gray-450 text-sm max-w-xl mx-auto leading-relaxed font-light">
-          At Sweet Devotion, we treat clean baking as a scientific art. Because our pastries and breads find places on your family dinner table, we ensure every grain of flour, drop of organic cream, and steel mixing surface is pristine.
+        <p className="text-gray-400 text-sm max-w-xl mx-auto leading-relaxed font-light">
+          At The Baker's Dozen, we treat clean baking as a scientific art. Because our pastries and breads find places on your family dinner table, we ensure every grain of flour, drop of organic cream, and steel mixing surface is pristine.
         </p>
       </section>
 

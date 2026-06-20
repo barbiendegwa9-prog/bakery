@@ -38,7 +38,7 @@ export default function ContactView({ onSendMessage }: ContactViewProps) {
     e.preventDefault();
     if (!directionAddress.trim()) return;
 
-    setDirectionsResult(`Calculating best sweet transit route from "${directionAddress}" to Sweet Devotion (41 Sweet Street, Nairobi)... Expected travel time: 14 mins under light congestion. Transit: Head South-East toward Kilimani, pass the local circle.`);
+    setDirectionsResult(`Calculating best sweet transit route from "${directionAddress}" to The Baker's Dozen (41 Sweet Street, Nairobi)... Expected travel time: 14 mins under light congestion. Transit: Head South-East toward Kilimani, pass the local circle.`);
   };
 
   return (
@@ -47,7 +47,7 @@ export default function ContactView({ onSendMessage }: ContactViewProps) {
       {/* Intro section */}
       <section className="text-center max-w-2xl mx-auto space-y-3">
         <span className="text-xs font-mono font-bold tracking-widest text-amber-600 uppercase">Interactive Liaison</span>
-        <h1 className="font-heading text-4xl font-extrabold text-gray-950 tracking-tight">Connect with Sweet Devotion</h1>
+        <h1 className="font-heading text-4xl font-extrabold text-gray-950 tracking-tight">Connect with The Baker's Dozen</h1>
         <p className="text-gray-500 font-medium text-sm">
           Have an allergy concern, catering reservation, bulk orders list inquiry, or custom cake request? Reach our passionate bakers directly.
         </p>
@@ -258,13 +258,13 @@ export default function ContactView({ onSendMessage }: ContactViewProps) {
             </g>
           </svg>
 
-          {/* Central Sweet Devotion Pin */}
+          {/* Central Baker's Dozen Pin */}
           <div className="relative z-10 flex flex-col items-center space-y-2 animate-bounce">
             <div className="h-10 w-10 rounded-full bg-amber-600 border border-white flex items-center justify-center shadow-lg">
               <MapPin className="h-5 w-5 text-white" />
             </div>
             <div className="bg-white px-3 py-1.5 rounded-lg shadow-md border border-gray-200 text-center">
-              <p className="text-[10px] font-black text-gray-900 leading-none">Sweet Devotion Bakery</p>
+              <p className="text-[10px] font-black text-gray-900 leading-none">The Baker's Dozen Bakery</p>
               <p className="text-[8px] text-amber-600 font-mono mt-0.5">41 Sweet Street, Nairobi</p>
             </div>
           </div>

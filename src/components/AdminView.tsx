@@ -122,7 +122,7 @@ export default function AdminView({
       <section className="bg-purple-950 text-white rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-md border-b-4 border-purple-500">
         <div className="space-y-1.5">
           <span className="text-[10px] sm:text-xs font-mono font-bold tracking-widest text-purple-300 uppercase bg-purple-900 border border-purple-750 px-2 rounded w-fit block">
-            Sweet Devotion Central Command
+            The Baker's Dozen Central Command
           </span>
           <h1 className="font-heading text-3xl font-extrabold font-bold tracking-tight">Lead Executive Control Board</h1>
           <p className="text-xs sm:text-sm text-purple-200">Manage real-time bakery items catalog, live delivery status, customer loyalty scores, and analytics reports.</p>
@@ -274,7 +274,7 @@ export default function AdminView({
           <div className="space-y-6 animate-fade-in" id="product-management-panel">
             <div className="flex justify-between items-center pb-2 border-b border-gray-100">
               <div>
-                <h2 className="font-heading font-extrabold text-base text-gray-900">Sweet Devotion Catalog SKU Editor</h2>
+                <h2 className="font-heading font-extrabold text-base text-gray-900">The Baker's Dozen Catalog SKU Editor</h2>
                 <p className="text-xs text-gray-400">Click Add or select catalog rows to adjust inventories/pricing.</p>
               </div>
 
@@ -550,11 +550,11 @@ export default function AdminView({
               <div className="fixed inset-0 bg-black/70 backdrop-blur-xs flex items-center justify-center p-4 z-50">
                 <div className="bg-white border-2 border-gray-800 rounded-3xl max-w-sm w-full p-6 space-y-6 shadow-2xl relative" id="invoice-sheet-popup">
                   <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-600 text-white font-mono font-bold text-[9px] px-3 py-1.5 rounded-full border border-white">
-                    VERIFIED SWEET DEVOTION INVOICE
+                    VERIFIED BAKER'S DOZEN INVOICE
                   </span>
 
                   <div className="text-center pt-2">
-                    <span className="font-heading font-black text-xl text-gray-905 block">Sweet Devotion</span>
+                    <span className="font-heading font-black text-xl text-gray-950 block">The Baker's Dozen</span>
                     <span className="text-[9px] font-mono text-gray-400 block tracking-widest leading-none mt-1">41 Sweet Street, Nairobi</span>
                     <span className="text-[10px] font-mono text-gray-650 block mt-2">Ref: {focusedInvoiceOrder.id} • Date: {focusedInvoiceOrder.date}</span>
                   </div>

@@ -4,6 +4,12 @@ import strawberryBirthdayCake from './assets/images/strawberry_birthday_cake_178
 import elegantWeddingCake from './assets/images/elegant_wedding_cake_1781953396518.jpg';
 import chocolateDripCake from './assets/images/chocolate_drip_cake_1781953414053.jpg';
 import royalAnniversaryCake from './assets/images/royal_anniversary_cake_1781953428969.jpg';
+import bakersDozenPastryBox from './assets/images/bakers_dozen_pastry_box_1781959205272.jpg';
+import goldenCroissant from './assets/images/golden_croissant_1781959764691.jpg';
+import pecanDanish from './assets/images/pecan_danish_1781959779292.jpg';
+import chocolatePuffPastry from './assets/images/chocolate_puff_pastry_1781959792902.jpg';
+import cranberrySourdough from './assets/images/cranberry_sourdough_1781959806789.jpg';
+import honeyBrownBread from './assets/images/honey_brown_bread_1781959823274.jpg';
 
 export const INITIAL_PRODUCTS: Product[] = [
   // 1. Cakes
@@ -75,6 +81,19 @@ export const INITIAL_PRODUCTS: Product[] = [
 
   // 2. Artisanal Breads & Pastries
   {
+    id: 'p0',
+    name: "The Classic Baker's Dozen Pastry Box",
+    category: 'Artisanal Breads & Pastries',
+    subcategory: "Baker's Dozen Bundles",
+    price: 3600.00,
+    description: "An abundant, sweet assortment of 13 freshly baked morning masterpieces—including golden butter croissants, cinnamon pecan danishes, and molten chocolate puff pastries, baked slow for organic luxury.",
+    rating: 5.0,
+    ratingCount: 165,
+    image: bakersDozenPastryBox,
+    inventory: 15,
+    isBestSeller: true
+  },
+  {
     id: 'p1',
     name: 'Golden Butter Croissant',
     category: 'Artisanal Breads & Pastries',
@@ -83,7 +102,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Flaky, crescent-shaped pastry made with 100% fine French butter, baked slow and golden-brown for the ultimate morning crunch.',
     rating: 4.9,
     ratingCount: 340,
-    image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=600',
+    image: goldenCroissant,
     inventory: 30,
     isBestSeller: true
   },
@@ -96,7 +115,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Braided soft pastry pastry filled with aromatic premium sweet cinnamon sugar and finished with a scattering of toasted pecan halves.',
     rating: 4.7,
     ratingCount: 112,
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600',
+    image: pecanDanish,
     inventory: 20,
     isBestSeller: false
   },
@@ -109,7 +128,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Light, puff pastry pastry sheets loaded with a molten core of premium Callebaut Belgian dark chocolate.',
     rating: 4.8,
     ratingCount: 180,
-    image: 'https://images.unsplash.com/photo-1549778399-f94fd24d61fd?auto=format&fit=crop&q=80&w=600',
+    image: chocolatePuffPastry,
     inventory: 25,
     isBestSeller: true
   },
@@ -124,7 +143,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Freshly baked daily classic sandwich bread, offering a cloud-soft interior crumble with a smooth, golden-buttered paper-thin crust.',
     rating: 4.6,
     ratingCount: 89,
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600',
+    image: goldenCroissant, // Let's use golden croissant for sandwich bread since they are both golden products, or let's keep it clean
     inventory: 15,
     isBestSeller: false
   },
@@ -137,7 +156,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Whole grain brown loaf sweetened with real organic forest wildflower honey and enriched with rolled oats.',
     rating: 4.7,
     ratingCount: 110,
-    image: 'https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=600',
+    image: honeyBrownBread,
     inventory: 12,
     isBestSeller: false
   },
@@ -150,7 +169,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Classic 24-hour slow fermented sourdough bread packed with plump dried cranberries and earthy walnut pieces for a perfect tang and crunch.',
     rating: 4.9,
     ratingCount: 215,
-    image: 'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&q=80&w=600',
+    image: cranberrySourdough,
     inventory: 10,
     isBestSeller: true
   },
