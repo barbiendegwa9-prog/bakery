@@ -200,6 +200,7 @@ export default function MenuView({ products, onAddToCart, onRequestCatering }: M
                   <img
                     src={product.image}
                     alt={product.name}
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                   />
                   <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-lg border border-amber-50 shadow-xs flex items-center">

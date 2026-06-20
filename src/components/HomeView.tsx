@@ -76,21 +76,22 @@ export default function HomeView({
           </div>
 
           {/* Graphical/Image display */}
-          <div className="lg:col-span-5 relative mt-6 lg:mt-0">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+          <div className="lg:col-span-5 relative mt-6 lg:mt-0 flex justify-center items-center">
+            <div className="relative mx-auto max-w-xs shadow-2xl border border-white/10 p-2 bg-[#121212]">
               <div className="absolute inset-0 bg-gradient-to-tr from-[#c5a059] to-amber-600 rounded-none rotate-2 scale-[1.01] opacity-5"></div>
               <img
                 src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800"
                 alt="Sweet Devotion Signature Strawberry Cake"
-                className="relative rounded-none shadow-2xl w-full h-[320px] sm:h-[420px] object-cover border border-white/10 transition-transform duration-500 hover:scale-[1.01]"
+                referrerPolicy="no-referrer"
+                className="relative rounded-none w-full h-[220px] sm:h-[280px] object-cover transition-transform duration-500 hover:scale-[1.01]"
               />
-              <div className="absolute -bottom-5 -left-5 bg-[#0a0a0a] p-4 rounded-none border border-white/10 flex items-center space-x-3 shadow-2xl">
-                <div className="p-2 bg-[#c5a059]/10 rounded-none border border-[#c5a059]/30">
-                  <ShieldCheck className="h-6 w-6 text-[#c5a059]" />
+              <div className="absolute -bottom-4 -left-4 bg-[#0a0a0a] p-3 rounded-none border border-white/10 flex items-center space-x-2.5 shadow-2xl">
+                <div className="p-1.5 bg-[#c5a059]/10 rounded-none border border-[#c5a059]/30">
+                  <ShieldCheck className="h-5 w-5 text-[#c5a059]" />
                 </div>
                 <div>
-                  <p className="text-[9px] font-mono font-bold text-gray-500 uppercase tracking-widest leading-none">FOOD SAFETY</p>
-                  <p className="text-xs font-black text-[#c5a059] mt-1">100% Certified Clean</p>
+                  <p className="text-[8px] font-mono font-bold text-gray-500 uppercase tracking-widest leading-none">FOOD SAFETY</p>
+                  <p className="text-[11px] font-black text-[#c5a059] mt-0.5 font-mono">100% Certified Clean</p>
                 </div>
               </div>
             </div>
@@ -197,6 +198,7 @@ export default function HomeView({
                   <img
                     src={product.image}
                     alt={product.name}
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                   />
                   <div className="absolute top-3 left-3 bg-[#0f0f0f]/90 backdrop-blur-md px-2 py-1 rounded-none border border-white/10 shadow-xs flex items-center">

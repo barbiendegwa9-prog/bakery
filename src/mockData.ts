@@ -1,4 +1,9 @@
 import { Product, Review, BlogPost } from './types';
+import goldenVelvetCake from './assets/images/golden_velvet_cake_1781952965675.jpg';
+import strawberryBirthdayCake from './assets/images/strawberry_birthday_cake_1781953379485.jpg';
+import elegantWeddingCake from './assets/images/elegant_wedding_cake_1781953396518.jpg';
+import chocolateDripCake from './assets/images/chocolate_drip_cake_1781953414053.jpg';
+import royalAnniversaryCake from './assets/images/royal_anniversary_cake_1781953428969.jpg';
 
 export const INITIAL_PRODUCTS: Product[] = [
   // 1. Cakes
@@ -11,7 +16,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Double-layered vanilla sponge cake filled with fresh strawberries, vanilla bean whipped cream, and finished with delicate strawberry buttercream swirls.',
     rating: 4.9,
     ratingCount: 124,
-    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=600',
+    image: strawberryBirthdayCake,
     inventory: 8,
     isBestSeller: true
   },
@@ -24,7 +29,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'A majestic 3-tiered wedding masterpiece, featuring almond sponge layers, rich raspberry coulis, and high-fashion fondant and sugar lace detailing.',
     rating: 5.0,
     ratingCount: 42,
-    image: 'https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&q=80&w=600',
+    image: elegantWeddingCake,
     inventory: 3,
     isBestSeller: false
   },
@@ -37,7 +42,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Moist red velvet cake layers with white chocolate cream cheese frosting and luxury edible gold flakes for extraordinary celebrations.',
     rating: 4.8,
     ratingCount: 76,
-    image: 'https://images.unsplash.com/photo-1562266648-a535129d5cd0?auto=format&fit=crop&q=80&w=600',
+    image: goldenVelvetCake,
     inventory: 12,
     isBestSeller: true
   },
@@ -50,9 +55,22 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'A customized, magnificent celebration cake loaded with decadent dark chocolate ganache, custom meringue kisses, and shiny macarons.',
     rating: 4.9,
     ratingCount: 95,
-    image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=600',
+    image: chocolateDripCake,
     inventory: 5,
     isBestSeller: false
+  },
+  {
+    id: 'c5',
+    name: 'Royal Ivory Rose Anniversary Cake',
+    category: 'Cakes',
+    subcategory: 'Anniversary cakes',
+    price: 5200.00,
+    description: 'An exquisite 2-tiered anniversary masterpiece featuring silk vanilla sponge layers, delicious raspberry creme filling, soft peach sugar rose buds, and silver ribbon wraps.',
+    rating: 5.0,
+    ratingCount: 38,
+    image: royalAnniversaryCake,
+    inventory: 6,
+    isBestSeller: true
   },
 
   // 2. Artisanal Breads & Pastries
