@@ -121,7 +121,6 @@ export default function App() {
     } else {
       setCart([...cart, { product, quantity: 1 }]);
     }
-    setCartOpen(true); // Open panel drawer so users see checkout feedback
   };
 
   const handleUpdateCartQuantity = (productId: string, delta: number) => {
