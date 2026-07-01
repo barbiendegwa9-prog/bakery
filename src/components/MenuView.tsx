@@ -189,66 +189,66 @@ export default function MenuView({ products, onAddToCart, onRequestCatering }: M
             <p className="text-xs text-gray-400 mt-1">Try to adjusting your search text or removing filters.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
             {sortedProducts.map((product) => (
               <div
                 key={product.id}
                 id={`catalog-card-${product.id}`}
-                className="bg-white rounded-2xl border border-gray-100 shadow-xs overflow-hidden flex flex-col hover:shadow-md transition-all duration-300 group"
+                className="bg-neutral-50 rounded-xl border border-gray-200/50 shadow-xs overflow-hidden flex flex-col hover:shadow-md transition-all duration-300 group"
               >
-                <div className="relative overflow-hidden aspect-square rounded-t-2xl">
+                <div className="relative overflow-hidden aspect-square rounded-t-xl">
                   <img
                     src={product.image}
                     alt={product.name}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                   />
-                  <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-lg border border-amber-50 shadow-xs flex items-center">
+                  <div className="absolute top-2.5 left-2.5 bg-neutral-100/95 backdrop-blur-md px-2 py-0.5 rounded-md border border-gray-200/30 shadow-xs flex items-center">
                     <Star className="h-3 w-3 text-amber-500 fill-amber-500 mr-1" />
-                    <span className="text-xs font-black text-gray-800">{product.rating}</span>
+                    <span className="text-[11px] font-bold text-gray-900">{product.rating}</span>
                     <span className="text-[9px] text-gray-400 font-medium ml-1">({product.ratingCount})</span>
                   </div>
                   {product.inventory <= 5 && product.inventory > 0 && (
-                    <span className="absolute bottom-3 left-3 bg-red-100 text-red-800 text-[10px] font-bold tracking-tight px-2 py-1 rounded shadow-xs">
+                    <span className="absolute bottom-2.5 left-2.5 bg-red-100 text-red-800 text-[9px] font-bold tracking-tight px-1.5 py-0.5 rounded shadow-xs">
                       Only {product.inventory} left
                     </span>
                   )}
                   {product.inventory === 0 && (
-                    <span className="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-xs font-bold uppercase tracking-wider">
+                    <span className="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-[10px] font-bold uppercase tracking-wider">
                       Sold Out
                     </span>
                   )}
                 </div>
 
-                <div className="p-5 flex-grow flex flex-col justify-between space-y-4">
+                <div className="p-3.5 flex-grow flex flex-col justify-between space-y-3">
                   <div>
                     <div className="flex justify-between items-center">
-                      <span className="text-[10px] font-mono tracking-wider font-extrabold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md uppercase">
+                      <span className="text-[9px] font-mono tracking-wider font-extrabold text-amber-700 bg-amber-100/50 px-2 py-0.5 rounded-md uppercase">
                         {product.subcategory}
                       </span>
                     </div>
-                    <h3 className="font-heading font-extrabold text-base text-gray-900 mt-2 line-clamp-1 group-hover:text-amber-600 transition-colors">
+                    <h3 className="font-heading font-extrabold text-sm text-gray-900 mt-1.5 line-clamp-1 group-hover:text-amber-600 transition-colors">
                       {product.name}
                     </h3>
-                    <p className="text-xs text-gray-500 leading-relaxed mt-1 line-clamp-2">
+                    <p className="text-[11px] text-gray-400 leading-relaxed mt-0.5 line-clamp-1">
                       {product.description}
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between pt-3 border-t border-gray-50">
-                    <span className="text-lg font-black text-gray-950">Ksh {product.price.toFixed(2)}</span>
+                  <div className="flex items-center justify-between pt-2.5 border-t border-gray-200/50">
+                    <span className="text-sm font-black text-gray-900">Ksh {product.price.toFixed(0)}</span>
                     <button
                       id={`catalog-add-${product.id}`}
                       disabled={product.inventory === 0}
                       onClick={() => onAddToCart(product)}
-                      className={`flex items-center space-x-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all duration-300 ${
+                      className={`flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-[10px] font-bold transition-all duration-300 ${
                         product.inventory === 0
-                          ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                          : 'bg-amber-600 text-white hover:bg-amber-700 hover:shadow-xs hover:shadow-amber-600/10'
+                          ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                          : 'bg-amber-600 text-white hover:bg-amber-700'
                       }`}
                     >
-                      <ShoppingCart className="h-4 w-4" />
-                      <span>Add to Cart</span>
+                      <ShoppingCart className="h-3.5 w-3.5" />
+                      <span>Add</span>
                     </button>
                   </div>
                 </div>

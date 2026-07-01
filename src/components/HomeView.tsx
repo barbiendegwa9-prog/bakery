@@ -18,13 +18,13 @@ export default function HomeView({
   openDeliveryForm,
 }: HomeViewProps) {
   return (
-    <div className="space-y-24 pb-24 bg-[#0c0c0c] text-[#e0e0e0] animate-fade-in">
+    <div className="space-y-24 pb-24 bg-transparent text-stone-800 animate-fade-in">
       {/* 1. Attractive Bakery Banner Section */}
-      <section className="relative overflow-hidden bg-[#0f0f0f] border-b border-white/5 rounded-none mx-0 sm:mx-0 lg:mx-0">
+      <section className="relative overflow-hidden bg-white border-b border-stone-150 rounded-none mx-0 sm:mx-0 lg:mx-0">
         {/* Decorative ambient elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#c5a059]/5 rounded-full blur-[120px] -z-10 translate-x-20 -translate-y-20"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#c5a059]/3 rounded-full blur-[100px] -z-10 -translate-x-10 translate-y-10"></div>
-        <div className="absolute top-1/2 left-10 -translate-y-1/2 opacity-[0.03] text-[180px] font-serif select-none pointer-events-none text-white font-extralight hidden lg:block">
+        <div className="absolute top-1/2 left-10 -translate-y-1/2 opacity-[0.03] text-[180px] font-serif select-none pointer-events-none text-stone-900 font-extralight hidden lg:block">
           Artisan
         </div>
 
@@ -36,13 +36,13 @@ export default function HomeView({
               <span>We bake with pure passion daily</span>
             </div>
             
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7.5xl font-light text-white tracking-tight leading-none">
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7.5xl font-light text-stone-900 tracking-tight leading-none">
               The Baker's <br />
               <span className="text-[#c5a059] italic">Dozen</span> Bakery
             </h1>
             
             {/* Welcome message */}
-            <p className="text-gray-400 text-sm sm:text-base max-w-md mx-auto lg:mx-0 leading-relaxed font-sans font-light">
+            <p className="text-stone-600 text-sm sm:text-base max-w-md mx-auto lg:mx-0 leading-relaxed font-sans font-light">
               Welcome to <strong className="text-[#c5a059] font-medium">The Baker's Dozen</strong>. Step into a world of pure aroma where 13 warm pastries are packed for the price of 12. Explore our exquisite handcrafted menu, order warm deliveries, or try our custom <strong className="text-[#c5a059] font-medium">Bakery Name Idea Designer</strong>.
             </p>
 
@@ -60,7 +60,7 @@ export default function HomeView({
               <button
                 id="cta-view-menu"
                 onClick={() => onNavigate('menu')}
-                className="border border-white/20 text-white text-xs uppercase tracking-[0.2em] font-bold px-8 py-4 hover:bg-white/5 transition-all duration-300 rounded-none cursor-pointer"
+                className="border border-stone-250 text-stone-800 text-xs uppercase tracking-[0.2em] font-bold px-8 py-4 hover:bg-stone-50 transition-all duration-300 rounded-none cursor-pointer"
               >
                 <span>Browse Menu Selections</span>
               </button>
@@ -68,7 +68,7 @@ export default function HomeView({
               <button
                 id="cta-request-delivery"
                 onClick={openDeliveryForm}
-                className="bg-white/5 hover:bg-white/10 text-[#c5a059] border border-[#c5a059]/30 text-xs uppercase tracking-[0.2em] font-bold px-8 py-4 transition-all duration-300 rounded-none cursor-pointer"
+                className="bg-[#c5a059]/10 hover:bg-[#c5a059]/20 text-[#c5a059] border border-[#c5a059]/30 text-xs uppercase tracking-[0.2em] font-bold px-8 py-4 transition-all duration-300 rounded-none cursor-pointer"
               >
                 <span>Request Delivery</span>
               </button>
@@ -77,7 +77,7 @@ export default function HomeView({
 
           {/* Graphical/Image display */}
           <div className="lg:col-span-5 relative mt-6 lg:mt-0 flex justify-center items-center">
-            <div className="relative mx-auto max-w-xs shadow-2xl border border-white/10 p-2 bg-[#121212]">
+            <div className="relative mx-auto max-w-xs shadow-2xl border border-stone-150 p-2 bg-white">
               <div className="absolute inset-0 bg-gradient-to-tr from-[#c5a059] to-amber-600 rounded-none rotate-2 scale-[1.01] opacity-5"></div>
               <img
                 src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800"
@@ -85,7 +85,7 @@ export default function HomeView({
                 referrerPolicy="no-referrer"
                 className="relative rounded-none w-full h-[220px] sm:h-[280px] object-cover transition-transform duration-500 hover:scale-[1.01]"
               />
-              <div className="absolute -bottom-4 -left-4 bg-[#0a0a0a] p-3 rounded-none border border-white/10 flex items-center space-x-2.5 shadow-2xl">
+              <div className="absolute -bottom-4 -left-4 bg-white p-3 rounded-none border border-stone-150 flex items-center space-x-2.5 shadow-2xl">
                 <div className="p-1.5 bg-[#c5a059]/10 rounded-none border border-[#c5a059]/30">
                   <ShieldCheck className="h-5 w-5 text-[#c5a059]" />
                 </div>
@@ -99,27 +99,27 @@ export default function HomeView({
         </div>
 
         {/* Feature highlights strip bottom of banner */}
-        <div className="border-t border-white/5 bg-[#0a0a0a]/50">
+        <div className="border-t border-stone-150 bg-[#faf9f6]/80">
           <div className="max-w-7xl mx-auto px-6 py-6 flex flex-wrap gap-10 justify-around text-left">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 border border-[#c5a059]/30 rounded-full flex items-center justify-center text-[#c5a059] text-sm">✓</div>
               <div>
                 <p className="text-[9px] uppercase text-gray-500 tracking-widest leading-none">Standards</p>
-                <p className="text-xs font-bold text-white mt-1">HACCP Certified</p>
+                <p className="text-xs font-bold text-stone-900 mt-1">HACCP Certified</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 border border-[#c5a059]/30 rounded-full flex items-center justify-center text-[#c5a059] text-sm">★</div>
               <div>
                 <p className="text-[9px] uppercase text-gray-500 tracking-widest leading-none">Ingredients</p>
-                <p className="text-xs font-bold text-white mt-1">Premium Organic</p>
+                <p className="text-xs font-bold text-stone-900 mt-1">Premium Organic</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 border border-[#c5a059]/30 rounded-full flex items-center justify-center text-[#c5a059] text-sm">⚡</div>
               <div>
                 <p className="text-[9px] uppercase text-gray-500 tracking-widest leading-none">Service</p>
-                <p className="text-xs font-bold text-white mt-1">Express Delivery</p>
+                <p className="text-xs font-bold text-stone-900 mt-1">Express Delivery</p>
               </div>
             </div>
           </div>
@@ -130,8 +130,8 @@ export default function HomeView({
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-3 mb-16">
           <span className="text-[10px] uppercase text-[#c5a059] tracking-[0.3em] font-mono leading-none block">Guest Experience</span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-light text-white">Why The Baker's Dozen Sparkles</h2>
-          <p className="text-gray-400 max-w-lg mx-auto text-sm">
+          <h2 className="font-serif text-3xl sm:text-4xl font-light text-stone-900">Why The Baker's Dozen Sparkles</h2>
+          <p className="text-stone-600 max-w-lg mx-auto text-sm">
             Our uncompromised focus on quality, purity, and rigorous clean-room standards makes us Nairobi's favorite bakery.
           </p>
         </div>
@@ -187,53 +187,53 @@ export default function HomeView({
             </button>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
             {bestSellers.map((product) => (
               <div
                 key={product.id}
                 id={`product-card-${product.id}`}
-                className="bg-[#141414] rounded-none border border-white/5 overflow-hidden flex flex-col hover:border-[#c5a059]/40 transition-all duration-300 group"
+                className="bg-neutral-50 rounded-xl border border-gray-200/50 overflow-hidden flex flex-col hover:border-amber-400/40 transition-all duration-300 group shadow-xs"
               >
-                <div className="relative overflow-hidden aspect-square flex-shrink-0">
+                <div className="relative overflow-hidden aspect-square flex-shrink-0 rounded-t-xl">
                   <img
                     src={product.image}
                     alt={product.name}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 bg-[#0f0f0f]/90 backdrop-blur-md px-2 py-1 rounded-none border border-white/10 shadow-xs flex items-center">
+                  <div className="absolute top-2.5 left-2.5 bg-neutral-100/95 backdrop-blur-md px-2 py-0.5 rounded-md border border-gray-200/30 shadow-xs flex items-center">
                     <Star className="h-3 w-3 text-[#c5a059] fill-[#c5a059] mr-1" />
-                    <span className="text-[10px] font-bold text-gray-300">{product.rating}</span>
+                    <span className="text-[11px] font-bold text-gray-950">{product.rating}</span>
                   </div>
                   {product.isBestSeller && (
-                    <div className="absolute top-3 right-3 bg-[#c5a059] text-black text-[9px] uppercase font-mono font-black tracking-widest px-2 py-0.5 rounded-none shadow-xs">
+                    <div className="absolute top-2.5 right-2.5 bg-[#c5a059] text-black text-[9px] uppercase font-mono font-black tracking-widest px-1.5 py-0.5 rounded shadow-xs">
                       Bestseller
                     </div>
                   )}
                 </div>
 
-                <div className="p-5 flex-grow flex flex-col justify-between space-y-4">
+                <div className="p-3.5 flex-grow flex flex-col justify-between space-y-3">
                   <div>
-                    <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-[#c5a059] bg-[#c5a059]/10 px-2 py-0.5 rounded-none border border-[#c5a059]/20">
+                    <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-[#c5a059] bg-[#c5a059]/10 px-2 py-0.5 rounded border border-[#c5a059]/20">
                       {product.subcategory}
                     </span>
-                    <h3 className="font-serif font-normal text-base text-white mt-3 group-hover:text-[#c5a059] transition-colors line-clamp-1">
+                    <h3 className="font-serif font-bold text-sm text-gray-950 mt-2.5 group-hover:text-[#c5a059] transition-colors line-clamp-1">
                       {product.name}
                     </h3>
-                    <p className="text-xs text-gray-400 leading-relaxed mt-1 line-clamp-2">
+                    <p className="text-[11px] text-gray-400 leading-relaxed mt-0.5 line-clamp-1">
                       {product.description}
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between pt-3 border-t border-white/5">
-                    <span className="text-base font-serif italic text-[#c5a059]">Ksh {product.price.toFixed(2)}</span>
+                  <div className="flex items-center justify-between pt-2.5 border-t border-gray-200/50">
+                    <span className="text-sm font-serif italic text-[#c5a059] font-bold">Ksh {product.price.toFixed(0)}</span>
                     <button
                       id={`add-to-cart-${product.id}`}
                       onClick={() => onAddToCart(product)}
-                      className="p-2.5 rounded-full bg-white/5 hover:bg-[#c5a059] text-[#c5a059] hover:text-black border border-[#c5a059]/20 hover:border-transparent transition-all duration-300 cursor-pointer"
+                      className="p-2 rounded-full bg-[#c5a059]/10 hover:bg-[#c5a059] text-[#c5a059] hover:text-black border border-[#c5a059]/20 hover:border-transparent transition-all duration-300 cursor-pointer"
                       title="Add to cart"
                     >
-                      <ShoppingCart className="h-4 w-4" />
+                      <ShoppingCart className="h-3.5 w-3.5" />
                     </button>
                   </div>
                 </div>

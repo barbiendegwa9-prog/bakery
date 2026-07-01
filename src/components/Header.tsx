@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChefHat, ShoppingBag, Menu, X, Shield, Sparkles, UserCheck } from 'lucide-react';
+import { ChefHat, ShoppingBag, Menu, X, Shield, Sparkles, UserCheck, Sun, Moon } from 'lucide-react';
 
 interface HeaderProps {
   activeTab: string;
@@ -8,6 +8,8 @@ interface HeaderProps {
   openCart: () => void;
   adminMode: boolean;
   setAdminMode: (mode: boolean) => void;
+  theme: 'light' | 'dark';
+  toggleTheme: () => void;
 }
 
 export default function Header({
@@ -17,6 +19,8 @@ export default function Header({
   openCart,
   adminMode,
   setAdminMode,
+  theme,
+  toggleTheme,
 }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -39,7 +43,7 @@ export default function Header({
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0f0f0f]/95 backdrop-blur-md border-b border-[#ffffff]/10 shadow-lg transition-all duration-300">
+    <header className="sticky top-0 z-50 bg-neutral-100/95 backdrop-blur-md border-b border-gray-200/50 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo & Brand */}
@@ -71,7 +75,7 @@ export default function Header({
                 className={`px-3 py-1.5 text-[11px] lg:text-xs uppercase tracking-widest font-semibold transition-all duration-300 whitespace-nowrap ${
                   activeTab === item.id && !adminMode
                     ? 'text-[#c5a059] border-b-2 border-[#c5a059] font-bold'
-                    : 'text-gray-400 hover:text-[#ffffff] hover:bg-[#ffffff]/10 rounded-md'
+                    : 'text-gray-400 hover:text-[#c5a059] hover:bg-gray-100/40 rounded-md'
                 }`}
               >
                 {item.label}
@@ -91,7 +95,7 @@ export default function Header({
               className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold uppercase tracking-wider border transition-all duration-300 ${
                 adminMode
                   ? 'bg-purple-900 border-purple-500 text-[#e9d5ff] shadow-md'
-                  : 'bg-transparent text-gray-400 hover:text-[#ffffff] hover:bg-[#ffffff]/10 border-[#ffffff]/10'
+                  : 'bg-transparent text-gray-400 hover:text-[#c5a059] hover:bg-gray-100/40 border-gray-200/30'
               }`}
               title="Toggle Bakery Dashboard Control"
             >
@@ -108,11 +112,25 @@ export default function Header({
               )}
             </button>
 
+            {/* Theme Toggle Button */}
+            <button
+              id="header-theme-toggle"
+              onClick={toggleTheme}
+              className="p-2.5 rounded-full border border-gray-200 bg-gray-50/10 text-gray-400 hover:text-[#c5a059] hover:bg-gray-100/40 transition-all duration-200"
+              title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            >
+              {theme === 'dark' ? (
+                <Sun className="h-4.5 w-4.5 text-amber-500 fill-amber-500" />
+              ) : (
+                <Moon className="h-4.5 w-4.5 text-indigo-500 fill-indigo-550" />
+              )}
+            </button>
+
             {/* Shopping Cart Button */}
             <button
               id="header-cart-btn"
               onClick={openCart}
-              className="relative p-2.5 rounded-full border border-[#ffffff]/10 bg-[#ffffff]/5 text-gray-300 hover:text-[#c5a059] hover:bg-[#ffffff]/10 transition-all duration-200"
+              className="relative p-2.5 rounded-full border border-gray-200 bg-gray-50/10 text-gray-400 hover:text-[#c5a059] hover:bg-gray-100/40 transition-all duration-200"
             >
               <ShoppingBag className="h-5 w-5" />
               {cartCount > 0 && (
@@ -126,7 +144,7 @@ export default function Header({
             <button
               id="header-mobile-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2.5 rounded-xl border border-[#ffffff]/10 text-gray-400 hover:bg-[#ffffff]/5"
+              className="md:hidden p-2.5 rounded-xl border border-gray-200 text-gray-400 hover:bg-gray-100/40"
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -136,7 +154,7 @@ export default function Header({
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-[#ffffff]/10 bg-[#0c0c0c]" id="mobile-navigation-drawer">
+        <div className="md:hidden border-t border-gray-200/50 bg-neutral-100" id="mobile-navigation-drawer">
           <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <button
@@ -146,13 +164,13 @@ export default function Header({
                 className={`block w-full text-left px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 ${
                   activeTab === item.id && !adminMode
                     ? 'bg-[#c5a059] text-black font-bold'
-                    : 'text-gray-300 hover:bg-[#ffffff]/5 hover:text-[#ffffff]'
+                    : 'text-gray-400 hover:bg-gray-100/50 hover:text-[#c5a059]'
                 }`}
               >
                 {item.label}
               </button>
             ))}
-            <div className="border-t border-[#ffffff]/10 my-2 pt-2 px-2">
+            <div className="border-t border-gray-200/50 my-2 pt-2 px-2">
               <button
                 id="mobile-admin-switch"
                 onClick={() => {
@@ -162,8 +180,8 @@ export default function Header({
                 }}
                 className={`flex items-center justify-center space-x-2 w-full p-3 rounded-xl text-sm font-semibold tracking-wide border ${
                   adminMode
-                    ? 'bg-purple-900 text-[#ffffff] border-purple-500'
-                    : 'bg-[#ffffff]/5 text-gray-300 border-[#ffffff]/10 hover:bg-[#ffffff]/10'
+                    ? 'bg-purple-900 text-white border-purple-500'
+                    : 'bg-transparent text-gray-400 border-gray-200/50 hover:bg-gray-100/50'
                 }`}
               >
                 <Shield className="h-4 w-4" />

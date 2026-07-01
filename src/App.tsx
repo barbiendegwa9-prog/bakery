@@ -23,6 +23,24 @@ export default function App() {
   const [adminMode, setAdminMode] = useState<boolean>(false);
   const [cartOpen, setCartOpen] = useState<boolean>(false);
   const [activeTrackingId, setActiveTrackingId] = useState<string>('');
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    const cached = localStorage.getItem('sweet_devotion_theme');
+    return (cached === 'light' || cached === 'dark') ? cached : 'dark';
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+    localStorage.setItem('sweet_devotion_theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
 
   // 1. STATE INITIALIZATION (SYNCED TO LOCAL STORAGE FOR ULTIMATE EXCELLENT RESILIENCE!)
   const [products, setProducts] = useState<Product[]>([]);
@@ -254,6 +272,8 @@ export default function App() {
         openCart={() => setCartOpen(true)}
         adminMode={adminMode}
         setAdminMode={setAdminMode}
+        theme={theme}
+        toggleTheme={toggleTheme}
       />
 
       {/* Main View Render block */}

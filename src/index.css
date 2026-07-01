@@ -1,78 +1,184 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
-@theme {
-  --color-amber-50: #121212;
-  --color-amber-100: rgba(197, 160, 89, 0.15);
-  --color-amber-200: rgba(197, 160, 89, 0.3);
-  --color-amber-300: rgba(197, 160, 89, 0.5);
-  --color-amber-400: #c5a059;
-  --color-amber-500: #c5a059;
-  --color-amber-600: #c5a059;
-  --color-amber-700: #d4b574;
-  --color-amber-800: #e3ca91;
-  --color-amber-900: #f2dec2;
-  --color-amber-950: #0a0a0a;
-
-  --color-neutral-50: #0c0c0c;
-  --color-neutral-100: #0f0f0f;
-  --color-neutral-200: #141414;
-  --color-neutral-300: #1a1a1a;
-  --color-neutral-400: #262626;
-  --color-neutral-500: #3a3a3a;
-  --color-neutral-600: rgba(255, 255, 255, 0.1);
-  --color-neutral-700: #a0a0a0;
-  --color-neutral-800: #e0e0e0;
-  --color-neutral-900: #f5f5f5;
-
-  --color-gray-50: #0f0f0f;
-  --color-gray-100: #141414;
-  --color-gray-150: #1c1c1c;
-  --color-gray-200: rgba(255, 255, 255, 0.1);
-  --color-gray-250: rgba(255, 255, 255, 0.15);
-  --color-gray-300: rgba(255, 255, 255, 0.2);
-  --color-gray-450: #888888;
-  --color-gray-400: #9e9e9e;
-  --color-gray-500: #828282;
-  --color-gray-600: #c2c2c2;
-  --color-gray-650: #d4d4d4;
-  --color-gray-700: #e5e5e5;
-  --color-gray-800: #f0f0f0;
-  --color-gray-900: #ffffff;
-  --color-gray-901: #ffffff;
-  --color-gray-905: #ffffff;
-  --color-gray-950: #ffffff;
-
-  --color-white: #0f0f0f;
-
+:root {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Playfair Display", Georgia, serif;
   --font-serif: "Playfair Display", Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Light Theme Color Values */
+  --amber-50: #fefdfa;
+  --amber-100: rgba(197, 160, 89, 0.1);
+  --amber-200: rgba(197, 160, 89, 0.22);
+  --amber-300: rgba(197, 160, 89, 0.4);
+  --amber-400: #c5a059;
+  --amber-500: #c5a059;
+  --amber-600: #b58e46;
+  --amber-700: #a07a34;
+  --amber-800: #826023;
+  --amber-900: #5f4414;
+  --amber-950: #faf8f5;
+
+  --neutral-50: #fafaf9;
+  --neutral-100: #f5f5f4;
+  --neutral-200: #ecece8;
+  --neutral-300: #d7d7d0;
+  --neutral-400: #a3a39c;
+  --neutral-500: #73736c;
+  --neutral-600: rgba(0, 0, 0, 0.08);
+  --neutral-700: #40403c;
+  --neutral-800: #262624;
+  --neutral-900: #171715;
+
+  --gray-50: #faf9f6;
+  --gray-100: #f4f3ef;
+  --gray-150: #eae8e1;
+  --gray-200: rgba(0, 0, 0, 0.06);
+  --gray-250: rgba(0, 0, 0, 0.1);
+  --gray-300: rgba(0, 0, 0, 0.15);
+  --gray-450: #6b7280;
+  --gray-400: #4b5563;
+  --gray-500: #374151;
+  --gray-600: #1f2937;
+  --gray-650: #111827;
+  --gray-700: #0f172a;
+  --gray-800: #090d16;
+  --gray-900: #020617;
+  --gray-901: #020617;
+  --gray-905: #010409;
+  --gray-950: #010409;
+
+  --white: #ffffff;
+  
+  --bg-app: #fafaf6;
+  --text-app: #201d1a;
+  --border-app: rgba(0, 0, 0, 0.08);
+}
+
+:root.dark {
+  /* Dark Theme Color Values */
+  --amber-50: #121212;
+  --amber-100: rgba(197, 160, 89, 0.15);
+  --amber-200: rgba(197, 160, 89, 0.3);
+  --amber-300: rgba(197, 160, 89, 0.5);
+  --amber-400: #c5a059;
+  --amber-500: #c5a059;
+  --amber-600: #c5a059;
+  --amber-700: #d4b574;
+  --amber-800: #e3ca91;
+  --amber-900: #f2dec2;
+  --amber-950: #0a0a0a;
+
+  --neutral-50: #0c0c0c;
+  --neutral-100: #0f0f0f;
+  --neutral-200: #141414;
+  --neutral-300: #1a1a1a;
+  --neutral-400: #262626;
+  --neutral-500: #3a3a3a;
+  --neutral-600: rgba(255, 255, 255, 0.1);
+  --neutral-700: #a0a0a0;
+  --neutral-800: #e0e0e0;
+  --neutral-900: #f5f5f5;
+
+  --gray-50: #0f0f0f;
+  --gray-100: #141414;
+  --gray-150: #1c1c1c;
+  --gray-200: rgba(255, 255, 255, 0.1);
+  --gray-250: rgba(255, 255, 255, 0.15);
+  --gray-300: rgba(255, 255, 255, 0.2);
+  --gray-450: #888888;
+  --gray-400: #9e9e9e;
+  --gray-500: #828282;
+  --gray-600: #c2c2c2;
+  --gray-650: #d4d4d4;
+  --gray-700: #e5e5e5;
+  --gray-800: #f0f0f0;
+  --gray-900: #ffffff;
+  --gray-901: #ffffff;
+  --gray-905: #ffffff;
+  --gray-950: #ffffff;
+
+  --white: #0f0f0f;
+  
+  --bg-app: #0c0c0c;
+  --text-app: #e0e0e0;
+  --border-app: rgba(255, 255, 255, 0.08);
+}
+
+@theme {
+  --color-amber-50: var(--amber-50);
+  --color-amber-100: var(--amber-100);
+  --color-amber-200: var(--amber-200);
+  --color-amber-300: var(--amber-300);
+  --color-amber-400: var(--amber-400);
+  --color-amber-500: var(--amber-500);
+  --color-amber-600: var(--amber-600);
+  --color-amber-700: var(--amber-700);
+  --color-amber-800: var(--amber-800);
+  --color-amber-900: var(--amber-900);
+  --color-amber-950: var(--amber-950);
+
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-150: var(--gray-150);
+  --color-gray-200: var(--gray-200);
+  --color-gray-250: var(--gray-250);
+  --color-gray-300: var(--gray-300);
+  --color-gray-450: var(--gray-450);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-650: var(--gray-650);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+  --color-gray-901: var(--gray-901);
+  --color-gray-905: var(--gray-905);
+  --color-gray-950: var(--gray-950);
+
+  --color-white: var(--white);
+
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
 }
 
 body {
-  background-color: #0c0c0c;
-  color: #e0e0e0;
+  background-color: var(--bg-app);
+  color: var(--text-app);
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Scrollbar customization for a sleek, dark aesthetic */
+/* Scrollbar customization for a sleek aesthetic */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #090909;
+  background: var(--neutral-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #252525;
+  background: var(--neutral-300);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c5a059;
+  background: var(--amber-400);
 }
 
 /* Smooth fade anims */
